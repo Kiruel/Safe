@@ -103,4 +103,9 @@ angular.module('DataService', [])
   }
 
   return Dservice;
+})
+.factory('SocketService', function (socketFactory) {
+
+  var socket = io.connect('http://192.168.43.70:3000');
+  return socket;
 });
