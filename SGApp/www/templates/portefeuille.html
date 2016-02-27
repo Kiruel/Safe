@@ -1,10 +1,10 @@
 <ion-view view-title="Portefeuille">
-  <ion-content  class="background">
-	<ion-list>
-		<ion-item ng-repeat="compte in client" class="item item-divider card item-icon-right" href="#/app/clientDetail/{{compte.id}}">
-		 <span>{{compte.p_l}}%</span><span>{{compte.title}}</span>
-		 <i class="icon ion-chevron-right icon-accessory"></i>
-		</ion-item>
-	</ion-list>
-  </ion-content>
+	<ion-content  class="background">
+		<ion-list>
+			<ion-item ng-repeat="compte in client" class="item item-divider card item-icon-right" href="#/app/clientDetail/{{compte.id}}">
+			 <span ng-class="compte.p_l < 0 ? 'down_percent' : 'up_percent'">{{compte.perfomance}}%</span><span>{{compte.title}}</span>
+			 <i class="icon ion-chevron-right icon-accessory"></i>
+			</ion-item>
+		</ion-list>
+	</ion-content>
 </ion-view>

@@ -113,8 +113,8 @@ angular.module('DataService', [])
       var clients = [{
         id: 0,
         title: data[36][18],
-        p_l: 2 + 3,
-        perfomance: "po",
+        p_l: parseFloat(data[36][17].replace(/\s/g, "")) - parseFloat(data[36][16].replace(/\s/g, "")),
+        perfomance: ((parseFloat(data[36][17].replace(/\s/g, "")) - parseFloat(data[36][16].replace(/\s/g, ""))) / parseFloat(data[36][16].replace(/\s/g, "")) * 100).toFixed(2),
         perfomance_annual: "asdfadsf",
         volatilite: "",
         max_drawdown: "",
@@ -122,8 +122,8 @@ angular.module('DataService', [])
       }, {
         id: 1,
         title: data[36][24],
-        p_l: 2 + 4,
-        perfomance: "po",
+        p_l: parseFloat(data[36][23].replace(/\s/g, "")) - parseFloat(data[36][22].replace(/\s/g, "")),
+        perfomance: ((parseFloat(data[36][23].replace(/\s/g, "")) - parseFloat(data[36][22].replace(/\s/g, ""))) / parseFloat(data[36][22].replace(/\s/g, "")) * 100).toFixed(2),
         perfomance_annual: "asdfadsf",
         volatilite: "",
         max_drawdown: "",
@@ -131,8 +131,8 @@ angular.module('DataService', [])
       }, {
         id: 2,
         title: data[36][30],
-        p_l: 2 + 6,
-        perfomance: "po",
+        p_l: parseFloat(data[36][29].replace(/\s/g, "")) - parseFloat(data[36][28].replace(/\s/g, "")),
+        perfomance: ((parseFloat(data[36][29].replace(/\s/g, "")) - parseFloat(data[36][28].replace(/\s/g, ""))) / parseFloat(data[36][28].replace(/\s/g, "")) * 100).toFixed(2),
         perfomance_annual: "asdfadsf",
         volatilite: "",
         max_drawdown: "",
