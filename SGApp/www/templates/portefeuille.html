@@ -1,5 +1,10 @@
 <ion-view view-title="Portefeuille">
   <ion-content  class="background">
-    <h1>portefeuille</h1>
+	<ion-list>
+		<ion-item ng-repeat="compte in client" class="item item-divider card item-icon-right" href="#/app/clientDetail/{{compte.id}}">
+		 <span>{{compte.p_l}}%</span><span>{{compte.title}}</span>
+		 <i class="icon ion-chevron-right icon-accessory"></i>
+		</ion-item>
+	</ion-list>
   </ion-content>
 </ion-view>

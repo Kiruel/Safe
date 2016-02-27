@@ -101,6 +101,54 @@ angular.module('DataService', [])
       cb(CSVToArray(data, ';'));
     });
   }
+  Dservice.getClientsTableDetailed = function (cb) {
+    $http.get('DataSources/Data/ClientsTableDetailed.csv')
+    .success(function (data) {
+      cb(CSVToArray(data, ','));
+    });
+  }
+  Dservice.getClientId = function (clientId, cb){
 
+    Dservice.getClientsTableDetailed(function (data) {
+      var clients = [{
+        id: 0,
+        title: data[36][18],
+        p_l: 2 + 3,
+        perfomance: "po",
+        perfomance_annual: "asdfadsf",
+        volatilite: "",
+        max_drawdown: "",
+        tracking_error: ""
+      }, {
+        id: 1,
+        title: data[36][24],
+        p_l: 2 + 4,
+        perfomance: "po",
+        perfomance_annual: "asdfadsf",
+        volatilite: "",
+        max_drawdown: "",
+        tracking_error: ""
+      }, {
+        id: 2,
+        title: data[36][30],
+        p_l: 2 + 6,
+        perfomance: "po",
+        perfomance_annual: "asdfadsf",
+        volatilite: "",
+        max_drawdown: "",
+        tracking_error: ""
+      }];
+
+      for (var i = 0; i < clients.length; i++) {
+        if (clients[i].id === parseInt(clientId)) {
+          cb(clients[i]);
+          break ;
+        }
+      }
+    });
+    // console.log(clientId);
+    // return clientId_return;
+  }
   return Dservice;
+
 });

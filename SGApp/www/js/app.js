@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'chart.js','home.controllers', 'consulting.controllers', 'DataService'])
+angular.module('starter', ['ionic', 'chart.js','home.controllers', 'portefeuille.controllers', 'consulting.controllers', 'DataService'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -36,7 +36,9 @@ angular.module('starter', ['ionic', 'chart.js','home.controllers', 'consulting.c
     url: '/portefeuille',
     views: {
       'menuContent': {
-        templateUrl: 'templates/portefeuille.html'
+        templateUrl: 'templates/portefeuille.html',
+          controller: 'portefeuilleCtrl'
+
       }
     }
   })
@@ -60,7 +62,15 @@ angular.module('starter', ['ionic', 'chart.js','home.controllers', 'consulting.c
       }
     }
   })
-
+  .state('app.clientDetail', {
+    url: '/clientDetail/:clientId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/clientDetail.html',
+        controller: 'ClientDetailCtrl'
+      }
+    }
+  })
   .state('app.parametres', {
     url: '/parametres',
     views: {
