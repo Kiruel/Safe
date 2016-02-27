@@ -1,8 +1,20 @@
 <ion-view view-title="Home">
 
   <ion-content class="background">
-    <canvas id="pie" class="chart chart-pie"
-      chart-data="data" chart-labels="labels">
-    </canvas>
+    <div class="list card">
+
+      <div class="item item-avatar">
+        <img src="../img/avatar.png">
+        <h2> Bonjour {{client.prenom}} </h2>
+      </div>
+
+      <div class="item item-body">
+        Des analyses
+      </div>
+
+    </div>
+    <highchart id="chart1" config="chartConfig"></highchart>
+    <div id="container" style="width: 400px; height: 400px; margin: 0 auto">
+    </div>
   </ion-content>
 </ion-view>
