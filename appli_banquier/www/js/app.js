@@ -9,7 +9,8 @@ angular.module('starter', [
   'ionic',
   'starter.controllers',
   'starter.services',
-  'btford.socket-io'
+  'btford.socket-io',
+  'ngLodash'
 ])
 
 .run(function($ionicPlatform) {
@@ -54,6 +55,15 @@ angular.module('starter', [
       }
     }
   })
+    .state('tab.notification-detail', {
+      url: '/notifications/:notificationId',
+      views: {
+        'tab-notifications': {
+          templateUrl: 'templates/notification-detail.html',
+          controller: 'NotificationDetailCtrl'
+        }
+      }
+    })
 
   .state('tab.profiles', {
       url: '/profiles',

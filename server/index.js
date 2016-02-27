@@ -10,16 +10,27 @@ io.on('connection', function(socket) {
   console.log('new client connected');
 
   socket.on('push_from_banker', function(msg){
+    io.emit('push_from_banker', msg);
     console.log(msg);
   });
-
-  setTimeout(function() {
-    socket.emit('message', 'lol');
-  }, 300);
 
   socket.on('accept_from_client', function(msg) {
+    io.emit('accept_from_client', msg);
     console.log(msg);
   });
+  var i = 0;
+
+  setInterval(function() {
+    i++;
+    io.emit('push_from_banker', 
+    { id: i,
+  type: 'Test'+i,
+  duration: 2,
+  projection: { duration: 4.5 },
+  analysis: 'Analysis',
+  '$$hashKey': 'object:30' });
+  }, 6500);
+
 });
 
 http.listen(3000, function(){

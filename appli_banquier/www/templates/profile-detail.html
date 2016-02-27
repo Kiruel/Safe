@@ -6,9 +6,23 @@
 -->
 <ion-view view-title="{{client.fullName}}">
   <ion-content class="padding">
-    <img ng-src="{{ '/img/profile_'+client.profileType+'.jpg'}}" style="width: 256px; height: 256px">
-    <p>
-      {{client.fullName}}
-    </p>
+    <div class="row">
+      <div class="col">
+        <img ng-src="{{ '/img/profile_'+client.profile_de_risque+'.jpg'}}" style="width: 256px; height: 256px" />
+      </div>
+      <div class="col col-75">
+        <ul>
+          <li><b>Nom :</b> {{client.nom}}</li>
+          <li><b>Prénom :</b> {{client.prenom}}</li>
+          <li><b>Sexe :</b> {{client.sexe}}</li>
+          <li><b>Date de naissance :</b> {{client.dateDeNaissance}}</li>
+          <li><b>Actif / retraité :</b> {{client.actif_retraite}}</li>
+          <li><b>Profession :</b> {{client.profession}}</li>
+          <li><b>Entrprise :</b> {{client.entrprise}}</li>
+          <li><b>Enfants :</b> {{client.enfants}}</li>
+          <li><b>Région :</b> {{client.regions}}</li>
+          <li><b>Profile de risque :</b> {{client.profile_de_risque}}</li>
+        </ul>
+      </div>
   </ion-content>
 </ion-view>

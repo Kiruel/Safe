@@ -8,7 +8,7 @@
     </div>
     <ion-list>
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="client in clients | filter:searchProfiles" type="item-text-wrap" href="#/tab/profiles/{{client.id}}">
-        <img ng-src="{{'/img/profile_'+client.profileType+'.jpg'}}">
+        <img ng-src="{{'/img/profile_'+client.profile_de_risque+'.jpg'}}">
         <h2>{{client.fullName}}</h2>
         <p>{{client.phoneNumber}}</p>
         <p>{{client.lastText}}</p>
