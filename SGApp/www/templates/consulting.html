@@ -1,15 +1,24 @@
 <ion-view view-title="Consulting">
   <ion-content  class="background">
-    <div class="card">
-  <div class="item item-divider">
-    Titre
-  </div>
-  <div class="item item-text-wrap">
-    Content
-  </div>
-  <div class="item item-divider">
-    I'm a Footer in a Card!
-  </div>
-</div>
+
+    <div ng-repeat="index in dataFromBanker">
+      <div ng-repeat="data in index ">
+        <div  class="card">
+          <div class="item item-divider">
+          <div class="row">
+            <div class="col col-33">Type: {{data.type}}</div>
+            <div class="col col-33 col-offset-33">Time: {{data.duration}} ans</div>
+          </div>
+        </div>
+          <div class="item item-text-wrap">
+            {{data.analysis}}
+          </div>
+          <div class="item item-divider">
+            I'm a Footer in a Card!
+          </div>
+        </div>
+      </div>
+    </div>
+
   </ion-content>
 </ion-view>
