@@ -43,3 +43,15 @@ $dark: #3f4041;
 .background {
     background-color: #EDEDED;
 }
+
+.down_percent {
+  color: red;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+.up_percent {
+  color: green;
+  padding-left: 16px;
+  padding-right: 20px;
+}
