@@ -1,0 +1,19 @@
+<ion-view view-title="Profiles">
+  <ion-content>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search" ng-model="searchProfiles">
+      </label>
+    </div>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="client in clients | filter:searchProfiles" type="item-text-wrap" href="#/tab/profiles/{{client.id}}">
+        <img ng-src="{{'/img/profile_'+client.profileType+'.jpg'}}">
+        <h2>{{client.fullName}}</h2>
+        <p>{{client.phoneNumber}}</p>
+        <p>{{client.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
