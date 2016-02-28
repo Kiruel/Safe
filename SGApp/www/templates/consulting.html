@@ -1,5 +1,13 @@
 <ion-view view-title="Consulting">
   <ion-content  class="background">
+
+  <div ng-if="dataFromBanker == 0">
+  <div class="card">
+  <div class="item item-text-wrap">
+    Aucune recommendation. 
+  </div>
+</div>
+    </div>
     <div ng-repeat="index in dataFromBanker">
       <div ng-repeat="data in index ">
         <div  class="card">
