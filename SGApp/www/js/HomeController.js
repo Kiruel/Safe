@@ -123,8 +123,3 @@ home.controller('homeCtrl', function($scope, Dservice) {
         // console.log($scope.clientId);
     });
 });
-
-
-
-
-
