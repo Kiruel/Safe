@@ -54,22 +54,22 @@ angular.module('starter.services', [])
   var opportunities = [
   {
     id: 0,
-    type: 'Test',
-    duration: 2, // between 1, 2, 3
+    type: 'Assurance vie',
+    duration: 'Long terme', // between 1, 2, 3
     projection: {
       duration: 4.5 // years
     },
-    analysis: '<b>A:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet lacus sit amet mauris dapibus, id sodales lectus posuere. Nam molestie turpis quis arcu impe sed. Proin nibhsce id tempor sapien. <br><br> <b>B:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet lacus sit amet mauris dapibus, id lestie turpis quis arcu imperdiet tempor. Nam fermentumllentesque malesuada, diam neque lacinia quam, vitae lacinia mi sapien quis leo. Fusce id tempor sapien. <br><br><b>E:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet lacus sit amet mauris dapibus, turpis quis arcu imperdiet tempor. Nam magna velit, accumsan sed tempor sed, convallis non diam.  Duis viverra, leo et pellentesque malesuada, diam neque lacinia quam, vitae lacinia mi sapien quis leo. Fusce id tempor sapien. <br><br>',
+    analysis: '<b>A:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet lacus sit amet mauris dapibus, id sodales lectus posuere. Nam molestie turpis quis arcu impe sed. Proin nibhsce id tempor sapien. <br><br> <b>B:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet lacus sit amet mauris dapibus, id lestie turpis quis arcu imperdiet tempor. Nam fermentumllentesque malesuada, diam neque lacinia quam, vitae lacinia mi sapien quis leo. Fusce id tempor sapien. <br><br>erdiet tempor. Nam magna velit, accumsan sed tempor sed, convallis non diam.  Duis viverra, leo et pellentesque malesuada, diam neque lacinia quam, vitae lacinia mi sapien quis leo. Fusce id tempor sapien. <br><br>',
     sent: true
   },
   {
     id: 1,
-    type: 'Test2',
-    duration: 2, // between 1, 2, 3
+    type: 'Compte titre',
+    duration: 'Court terme', // between 1, 2, 3
     projection: {
       duration: 4.5 // years
     },
-    analysis: '<b>A:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet lacus sit amet mauripit erat ut volutpat. Duis viverra, leo et pellentesque malesuada, diam neque lacinia quam, vitae lacinia mi sapien quis leo. Fusce id tempor sapien. <br><br> <b>B:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet lacorper justo vitae nisi pellentesque eleifend. Morbi et neque vel tellus dignissim dignissim non ac tortor. Aliquam erat volutpat. Morbi pellentesque suscipit erat ut volutpat. Duis viverra, leo et pellentesque malesuada, diam neque lacinia quam, vitae lacinia mi sapien quis leo. Fusce id tempor sapien. <br><br><b>C: </b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet lacus sit amet mauris dapibus, id  placerat. Fusce ullamcorper justo vitae nisi pellentesque eleifend. Morbi et neque vel tvitae lacinia mi sapien quis leo. Fusce id tempor sapien. <br><br><b>E:</b> Lorem ipsum dolor sit amet, consectetuue suscipit erat ut volutpat. Duis viverra, leo et pellentesque malesuada, diam neque lacinia quam, vitae lacinia mi sapien quis leo. Fusce id tempor sapien. <br><br>',
+    analysis: '<b>A:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet lacus sit amet mauripit erat ut volutpat. Duis viverra, leo et pellentesque malesuads leo. Fusce id tempor sapien. <br><br><b>C: </b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet lacus sit amet mauris dapibus, id  placerat. Fusce ullamcorper justo vitae nisi pellentesque eleifend. Morbi et neque vel tvitae lacinia mi sapien quis leo. Fusce id tempor sapien. <br><br><b>E:</b> Lorem ipsum dolor sit am',
     sent: false
   }
 ];

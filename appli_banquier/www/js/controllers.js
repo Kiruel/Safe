@@ -16,8 +16,8 @@ angular.module('starter.controllers', [])
 
     Notifications.append({
       id: uid,
-      title: 'Test',
-      informations: '',
+      title: 'Recommandation accepted',
+      informations: msg.prod.analysis,
       clientFullName: 'Sophie Heflin'
     });
     analytics.track('notification_received');
