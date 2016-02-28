@@ -24,7 +24,7 @@ angular.module('starter.services', [])
     id: 0,
     title: 'Test',
     informations: '',
-    clientFullName: 'lol'
+    clientFullName: 'test client'
   }
 ];
 
@@ -44,7 +44,8 @@ angular.module('starter.services', [])
       notifications.push(notif);
     },
     append: function(notif) {
-      notifications = [notif].concat(notifications)
+      notifications = [notif].concat(notifications);
+      console.log(notifications);
     }
   };
  })
@@ -58,7 +59,7 @@ angular.module('starter.services', [])
     projection: {
       duration: 4.5 // years
     },
-    analysis: 'Test 22',
+    analysis: '<b>A:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet lacus sit amet mauris dapibus, id sodales lectus posuere. Nam molestie turpis quis arcu impe sed. Proin nibh lorem, fermentum vel purus vel, cursus egestas lectus. Duis vitae diam quis lece ullamcorper justo vitae nisi pellentesque eleifenon ac tortor. Aliquam erat volutpat. Morbi pellentesque suscipit erat ut volutpat. Duis viverra, leo et pellentesque malesuada, diam neque lacinia quam, vitae lacinia mi sapien quis leo. Fusce id tempor sapien. <br><br> <b>B:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet lacus sit amet mauris dapibus, id lestie turpis quis arcu imperdiet tempor. Nam fermentum vs. Duis vitae diam quis lectus malesuada eleifend. Morbi ut risus et leo cursus placerat. Fusce ullamcorper justo vitae nisi pellentesque eleifend. Morbi et neque vel tellus dignissim dignissim non ac tortor. Aliquam erat volutpat. Morbi pellentesque suscipit erat ut volutpat. Duis viverra, leo et pellentesque malesuada, diam neque lacinia quam, vitae lacinia mi sapien quis leo. Fusce id tempor sapien. <br><br><b>C: </b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet lacus sit amet mauris dapibus, id sod quis arcu imperdiet san sed tempor sed, convallis non diam. Prouis lectus malesuada eleifend. Morbi ut risus et leo cursus placerat. Fusce ullamcorper justo vitae nisi pellentesque eleifend. Morbi et neque vel tellus dignissim dignissim non ac tortor. Aliquam erat volutpat. Morbi pellentesque suscipit erat ut volutpat. Duis viverra, leo et pellentesque malesuada, diam neque lacinia quam, vitae lacinia mi sapien quis leo. Fusce id tempor sapien. <br><br><b>D:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet lacus sitposuere. Nam molestie turpis quis arcu imperdiet tempor. Nam magna velit, accumsan sed tempor sed, convallis non diam. Proin nmalesuada eleifend. Morbi ut risus et leo cursus placerat. Fusce ullamcorper justo vitae nisi pellentesque eleifend. Morbi et neque vel tellus dignissim dignissim non ac tortor. Aliquam erat volutpat. Morbi pellentesque suscipit erat ut volutpat. Duis viverra, leo et pellentesque malesuada, diam neque lacinia quam, vitae lacinia mi sapien quis leo. Fusce id tempor sapien. <br><br><b>E:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet lacus sit amet mauris dapibus, turpis quis arcu imperdiet tempor. Nam magna velit, accumsan sed tempor sed, convallis non diam. Proin nibh loremlesuada eleifend. Morbi ut risus et leo cursus placerat. Fusce ullamcorper justo vitae nisi pellentesque eleifend. Morbi et neque vel tellus dignissim dignissim non ac tortor. Aliquam erat volutpat. Morbi pellentesque suscipit erat ut volutpat. Duis viverra, leo et pellentesque malesuada, diam neque lacinia quam, vitae lacinia mi sapien quis leo. Fusce id tempor sapien. <br><br>',
     sent: true
   },
   {
@@ -68,7 +69,7 @@ angular.module('starter.services', [])
     projection: {
       duration: 4.5 // years
     },
-    analysis: 'Test 22',
+    analysis: '<b>A:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet lacus sit amet mauris dapibus, id sodales lectus posuere. Nam molestie turpis quis arcu imperdiet tempor. Nam magna velit, accumsan sed tempor sed, convallis non diam. Proin nibh lorem, fermentum vel purus vel, cursus egestas lectus. Duis vitae diam quis lece ullamcorper justo vitae nisi pellentesque eleifend. Morbi et neque vel tellus dignissim dignissim non ac tortor. Aliquam erat volutpat. Morbi pellentesque suscipit erat ut volutpat. Duis viverra, leo et pellentesque malesuada, diam neque lacinia quam, vitae lacinia mi sapien quis leo. Fusce id tempor sapien. <br><br> <b>B:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet lacus sit amet mauris dapibus, id sodales lectus posuere. Nam molestie turpis quis arcu imperdiet tempor. Nam magna velit, accumsan sed tempor sed, convallis non diam. Proin nibh lorem, fermentum vel purus vel, cursus egestas lectus. Duis vitae diam quis lectus malesuada eleifend. Morbi ut risus et leo cursus placerat. Fusce ullamcorper justo vitae nisi pellentesque eleifend. Morbi et neque vel tellus dignissim dignissim non ac tortor. Aliquam erat volutpat. Morbi pellentesque suscipit erat ut volutpat. Duis viverra, leo et pellentesque malesuada, diam neque lacinia quam, vitae lacinia mi sapien quis leo. Fusce id tempor sapien. <br><br><b>C: </b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet lacus sit amet mauris dapibus, id sodales lectus posuere. Nam molestie turpis quis arcu imperdiet tempor. Nam magna velit, accumsan sed tempor sed, convallis non diam. Proin nibh lorem, fermentum vel purus vel, cursus egestas lectus. Duis vitae diam quis lectus malesuada eleifend. Morbi ut risus et leo cursus placerat. Fusce ullamcorper justo vitae nisi pellentesque eleifend. Morbi et neque vel tellus dignissim dignissim non ac tortor. Aliquam erat volutpat. Morbi pellentesque suscipit erat ut volutpat. Duis viverra, leo et pellentesque malesuada, diam neque lacinia quam, vitae lacinia mi sapien quis leo. Fusce id tempor sapien. <br><br><b>D:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet lacus sit amet mauris dapibus, id sodales lectus posuere. Nam molestie turpis quis arcu imperdiet tempor. Nam magna velit, accumsan sed tempor sed, convallis non diam. Proin nibh lorem, fermentum vel purus vel, cursus egestas lectus. Duis vitae diam quis lectus malesuada eleifend. Morbi ut risus et leo cursus placerat. Fusce ullamcorper justo vitae nisi pellentesque eleifend. Morbi et neque vel tellus dignissim dignissim non ac tortor. Aliquam erat volutpat. Morbi pellentesque suscipit erat ut volutpat. Duis viverra, leo et pellentesque malesuada, diam neque lacinia quam, vitae lacinia mi sapien quis leo. Fusce id tempor sapien. <br><br><b>E:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet lacus sit amet mauris dapibus, id sodales lectus posuere. Nam molestie turpis quis arcu imperdiet tempor. Nam magna velit, accumsan sed tempor sed, convallis non diam. Proin nibh lorem, fermentum vel purus vel, cursus egestas lectus. Duis vitae diam quis lectus malesuada eleifend. Morbi ut risus et leo cursus placerat. Fusce ullamcorper justo vitae nisi pellentesque eleifend. Morbi et neque vel tellus dignissim dignissim non ac tortor. Aliquam erat volutpat. Morbi pellentesque suscipit erat ut volutpat. Duis viverra, leo et pellentesque malesuada, diam neque lacinia quam, vitae lacinia mi sapien quis leo. Fusce id tempor sapien. <br><br>',
     sent: false
   }
 ];
