@@ -92,7 +92,16 @@ angular.module('starter', [
         controller: 'OpportunitiesCtrl'
       }
     }
-  });
+  })
+    .state('tab.opportunity-new', {
+      url: '/opportunities/new',
+      views: {
+        'tab-opportunities': {
+          templateUrl: 'templates/opportunity-new.html',
+          controller: 'OpportunityNewCtrl'
+        }
+      }
+    });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/notifications');

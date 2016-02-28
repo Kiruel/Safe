@@ -59,7 +59,7 @@ angular.module('starter.services', [])
       duration: 4.5 // years
     },
     analysis: 'Test 22',
-    sent: false
+    sent: true
   },
   {
     id: 1,
@@ -84,6 +84,12 @@ angular.module('starter.services', [])
       return lodah.find(opportunities, function(opportunity) {
         return opportunity.id == id;
       });
+    },
+    push: function(notif) {
+      opportunities.push(notif);
+    },
+    append: function(notif) {
+    opportunities = [notif].concat(opportunities)
     }
   };
  })
