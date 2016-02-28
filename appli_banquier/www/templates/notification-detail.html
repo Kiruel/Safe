@@ -1,9 +1,14 @@
 <ion-view view-title="{{notification.title}}">
   <ion-content class="padding">
-    <div class="row">
-      <p>
-        <b>From: </b> {{notification.clientFullName}}
-      </p>
+    <div class="card">
+      <div class="item item-divider">
+        <b>From :</b> {{notification.clientFullName}}
+      </div>
+      <div class="item item-text-wrap" ng-bind-html="notification.informations">
+      </div>
     </div>
+    <button class="button button-block button-assertive button-outline" ng-click="removeNotification(notification)">
+      Delete
+    </button>
   </ion-content>
 </ion-view>

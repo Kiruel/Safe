@@ -10,7 +10,8 @@ angular.module('starter', [
   'starter.controllers',
   'starter.services',
   'btford.socket-io',
-  'ngLodash'
+  'ngLodash',
+  'ngRoute'
 ])
 
 .run(function($ionicPlatform) {
