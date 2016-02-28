@@ -1,12 +1,46 @@
 var home = angular.module('home.controllers', []);
 
 home.controller('homeCtrl', function($scope, Dservice) {
-
   $scope.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
   $scope.data = [300, 500, 100];
   // Form data for the login modal
   $scope.client = {};
   $scope.spinner = true;
+
+    Dservice.getClientsTableDetailed(function (data) {
+        clients = [{
+            id: 0,
+            title: data[36][18],
+            p_l: parseFloat(data[36][17].replace(/\s/g, "")) - parseFloat(data[36][16].replace(/\s/g, "")),
+            perfomance: ((parseFloat(data[36][17].replace(/\s/g, "")) - parseFloat(data[36][16].replace(/\s/g, ""))) / parseFloat(data[36][16].replace(/\s/g, "")) * 100).toFixed(2),
+            perfomance_annual: "asdfadsf",
+            volatilite: "",
+            max_drawdown: "",
+            tracking_error: ""
+        }, {
+            id: 1,
+            title: data[36][24],
+            p_l: parseFloat(data[36][23].replace(/\s/g, "")) - parseFloat(data[36][22].replace(/\s/g, "")),
+            perfomance: ((parseFloat(data[36][23].replace(/\s/g, "")) - parseFloat(data[36][22].replace(/\s/g, ""))) / parseFloat(data[36][22].replace(/\s/g, "")) * 100).toFixed(2),
+            perfomance_annual: "asdfadsf",
+            volatilite: "",
+            max_drawdown: "",
+            tracking_error: ""
+        }, {
+            id: 2,
+            title: data[36][30],
+            p_l: parseFloat(data[36][29].replace(/\s/g, "")) - parseFloat(data[36][28].replace(/\s/g, "")),
+            perfomance: ((parseFloat(data[36][29].replace(/\s/g, "")) - parseFloat(data[36][28].replace(/\s/g, ""))) / parseFloat(data[36][28].replace(/\s/g, "")) * 100).toFixed(2),
+            perfomance_annual: "asdfadsf",
+            volatilite: "",
+            max_drawdown: "",
+            tracking_error: ""
+        }];
+        console.log(data);
+        $scope.client = clients;
+
+        console.log($scope.client);
+    });
 
   Dservice.getClientsTable(function(data) {
     $scope.client.prenom = data[36][2];
@@ -26,9 +60,7 @@ home.controller('homeCtrl', function($scope, Dservice) {
       }
     })
   });
-
-
-setTimeout(function () {
+  setTimeout(function () {
 
   Highcharts.chart('container', {
          chart: {
@@ -164,6 +196,20 @@ setTimeout(function () {
             //  .translate(190, 96)
             //  .add(this.series[2].group);
      })
-   }, 3000);
-
+   }, 200);
 });
+
+home.controller('ClientDetailCtrl', function($scope, $stateParams, Dservice) {
+    $scope.clientId = {};
+    // console.log($stateParams.clientId);
+    $scope.clientId = Dservice.getClientId($stateParams.clientId, function (data) {
+        console.log(data);
+        $scope.clientId = data;
+    });
+    // console.log($scope.clientId);
+});
+
+
+
+
+
