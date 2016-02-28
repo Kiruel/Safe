@@ -56,4 +56,7 @@ angular.module('starter.controllers', [])
     opportunity.sent = true;
   }
 
+})
+
+.controller('OpportunityNewCtrl', function($scope, SocketService, Opportunities) {
 });
