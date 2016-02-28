@@ -68,3 +68,37 @@ $dark: #3f4041;
 #cardCompte {
   padding: 20px;
 }
+
+.avatar {
+    width: 53px;
+    height: 55px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    position: relative;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+    box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+}
+.avatarDiv {
+  height: 170px;
+  background-color: #5F5F5F;
+  padding-bottom: 10px;
+ }
+ #avatarName {
+  color:  white;
+  margin-top: 10px;
+  margin-left: 19px;
+  padding-top: 100px;
+  font-size: 15px;
+  font-weight: 200;
+ }
+
+ .has-header {
+    top: 33px;
+}
