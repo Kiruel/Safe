@@ -10,7 +10,7 @@ io.on('connection', function(socket) {
   console.log('new client connected');
 
   socket.on('push_from_banker', function(msg){
-    io.emit('push_from_banker', msg);
+    socket.broadcast.emit('push_from_banker', msg);
     console.log(msg);
   });
 
