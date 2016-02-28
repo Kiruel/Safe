@@ -6,13 +6,13 @@
     <div class="list card" ng-repeat="opportunity in opportunities">
       <div class="item item-divider" ng-class="{'opportunity-sent': opportunity.sent == true}">{{opportunity.type}}</div>
       <div class="item item-body">
-        <div class="row">
-        </div>
-        <div class="row">
           <div>
             {{opportunity.analysis}}
           </div>
-        </div>
+      </div>
+      <div class="item item-body">
+      </div>
+      <div class="item item-body">
         <div class="row">
           <div class="col text-center">
             <button class="button button-outline button-assertive" ng-click="discardOpportunity(opportunity)">

@@ -6,23 +6,250 @@
 -->
 <ion-view view-title="{{client.fullName}}">
   <ion-content class="padding">
-    <div class="row">
-      <div class="col">
-        <img ng-src="{{ '/img/profile_'+client.profile_de_risque+'.jpg'}}" style="width: 256px; height: 256px" />
+    <div class="list card">
+
+      <div class="item item-avatar" style="background-color: #EBEBEB">
+        <img ng-src="{{ '/img/profile_'+client.profile_de_risque+'.jpg'}}" style="width: 128px; height: 128px">
+        <h2>{{client.fullName}}</h2>
+        <p>{{client.dateDeNaissance}}</p>
       </div>
-      <div class="col col-75">
-        <ul>
-          <li><b>Nom :</b> {{client.nom}}</li>
-          <li><b>Prénom :</b> {{client.prenom}}</li>
-          <li><b>Sexe :</b> {{client.sexe}}</li>
-          <li><b>Date de naissance :</b> {{client.dateDeNaissance}}</li>
-          <li><b>Actif / retraité :</b> {{client.actif_retraite}}</li>
-          <li><b>Profession :</b> {{client.profession}}</li>
-          <li><b>Entrprise :</b> {{client.entrprise}}</li>
-          <li><b>Enfants :</b> {{client.enfants}}</li>
-          <li><b>Région :</b> {{client.regions}}</li>
-          <li><b>Profile de risque :</b> {{client.profile_de_risque}}</li>
-        </ul>
+
+      <div class="item item-body">
+        <div class="row">
+          <div class="col">
+            <ul>
+              <li><b>Nom :</b> {{client.nom}}</li>
+              <li><b>Prénom :</b> {{client.prenom}}</li>
+              <li><b>Sexe :</b> {{client.sexe}}</li>
+              <li><b>Date de naissance :</b> {{client.dateDeNaissance}}</li>
+              <li><b>Actif / retraité :</b> {{client.actif_retraite}}</li>
+              <li><b>Profession :</b> {{client.profession}}</li>
+              <li><b>Entrprise :</b> {{client.entrprise}}</li>
+              <li><b>Enfants :</b> {{client.enfants}}</li>
+              <li><b>Région :</b> {{client.regions}}</li>
+              <li><b>Profile de risque :</b> {{client.profile_de_risque}}</li>
+            </ul>
+          </div>
+          <div class="col">
+            <ul>
+              <li><b>Phone01 :</b> +33 6 69 69 69 69</li>
+              <li><b>Phone02 :</b> +33 1 42 42 42 42</li>
+              <li><b>Email :</b> money@student.42.fr</li>
+              <li><b>Address :</b> 42 rue du sommeil</li>
+              <li><b>Zipcode :</b> 75016</li>
+              <li><b>Country :</b> France</li>
+              <li><b>Website :</b> -</li>
+              <li><b>Linked In :</b> <a href="#">https://www.linkedin.com/in/superman-36507a20</a></li>
+              <li><b>Facebook :</b> <a href="#">https://www.facebook.com/superman/</a></li>
+              <li><b>Twitter :</b> <a href="#">https://twitter.com/super_trades</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <ul>
+              <li><b>Introduced by :</b> A. FRANCOIS</li>
+              <li><b>Principal referent :</b> W. BUFFET</li>
+            </ul>
+          </div>
+        </div>
       </div>
+      <div class="item item-body">
+        <div class="row">
+          <div class="col">
+            <div class="list card">
+              <a href="#" class="item item-icon-left">
+                <i class="icon ion-home"></i>
+                Enter home address
+              </a>
+
+              <a href="#" class="item item-icon-left">
+                <i class="icon ion-card"></i>
+                Enter card information
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="list card">
+              <a href="#" class="item item-icon-left">
+                <i class="icon ion-home"></i>
+                Enter home address
+              </a>
+
+              <a href="#" class="item item-icon-left">
+                <i class="icon ion-card"></i>
+                Enter card information
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="list card">
+              <a href="#" class="item item-icon-left">
+                <i class="icon ion-home"></i>
+                Enter home address
+              </a>
+
+              <a href="#" class="item item-icon-left">
+                <i class="icon ion-card"></i>
+                Enter card information
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item item-body">
+        <div id="container" style="height: 400px; min-width: 310px"></div>
+      </div>
+      <div class="item item-body">
+        <table class="table table-bordered">
+          <tr>
+            <th>Call UID</th>
+            <th>Date</th>
+            <th>Duration</th>
+            <th>Operator</th>
+          </tr>
+          <tr class="success">
+            <td>4242-2121-8484-6969-4242</td>
+            <td>06/06/1969</td>
+            <td>03h 42m 02s</td>
+            <td>K. PRIMICERIO</td>
+          </tr>
+          <tr class="active">
+            <td>4242-erer-dzdz-6969-4242</td>
+            <td>04/02/2015</td>
+            <td>00h 52m 09s</td>
+            <td>B. SIMPSON</td>
+          </tr>
+          <tr class="success">
+            <td>4242-sdgtr-iop-6969-4242</td>
+            <td>12/05/2015</td>
+            <td>00h 42m 42s</td>
+            <td>B. CHELLI</td>
+          </tr>
+          <tr class="danger">
+            <td>4242-ffff-dead-beaf-4242</td>
+            <td>01/01/2016</td>
+            <td>00h 02m 22s</td>
+            <td>E. CARTMAN</td>
+          </tr>
+          <tr class="success">
+            <td>4242-olol-lolo-lolo-4242</td>
+            <td>02/28/2016</td>
+            <td>05h 42m 22s</td>
+            <td>A. DUVAL</td>
+          </tr>
+        </table>
+      </div>
+      <div class="item item-body">
+      <div class="container">
+  <div class="page-header">
+    <h1 id="timeline">Timeline</h1>
+  </div>
+  <ul class="timeline">
+    <li>
+      <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small></p>
+        </div>
+        <div class="timeline-body">
+          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+            Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+        </div>
+      </div>
+    </li>
+    <li class="timeline-inverted">
+      <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+        </div>
+        <div class="timeline-body">
+          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+            Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+          <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere
+            pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+        </div>
+        <div class="timeline-body">
+          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+            Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+        </div>
+      </div>
+    </li>
+    <li class="timeline-inverted">
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+        </div>
+        <div class="timeline-body">
+          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+            Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+        </div>
+        <div class="timeline-body">
+          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+            Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+          <hr>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+              <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+        </div>
+        <div class="timeline-body">
+          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+            Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+        </div>
+      </div>
+    </li>
+    <li class="timeline-inverted">
+      <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+        </div>
+        <div class="timeline-body">
+          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+            Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+      </div>
+      <div class="item item-body">
+      </div>
+
+    </div>
+
   </ion-content>
 </ion-view>
