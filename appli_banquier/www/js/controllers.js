@@ -1,6 +1,7 @@
 angular.module('starter.controllers', [])
 
-.controller('NotificationsCtrl', function($scope, Notifications, SocketService, $state) {
+.controller('NotificationsCtrl', function($scope, Notifications, SocketService, $state, $location) {
+  analytics.page($location.url());
 
   $scope.notifications = Notifications.all();
 
@@ -19,24 +20,33 @@ angular.module('starter.controllers', [])
       informations: '',
       clientFullName: 'Sophie Heflin'
     });
+    analytics.track('notification_received');
     $state.go($state.current, {}, {reload: true});
     uid += 1;
   });
 
   $scope.removeNotification = function(notification) {
     Notifications.remove(notification);
+    analytics.track('notification_removed');
   };
 
 })
 
-.controller('NotificationDetailCtrl', function($scope, $stateParams, Notifications) {
+.controller('NotificationDetailCtrl', function($scope, $stateParams, Notifications, $location, $route) {
+  analytics.page($location.url());
   $scope.notification = Notifications.get($stateParams.notificationId);
+  $scope.removeNotification = function(notification) {
+    analytics.track('notification_removed');
+    Notifications.remove(notification);
+    $location.path('#/tabs/notifications');
+  };
 })
 .controller('ProfileDetailCtrl', function($scope, $stateParams, Clients) {
   $scope.client = Clients.get($stateParams.profileId);
 })
 
-.controller('ProfilesCtrl', function($scope, Clients, Dservice, lodash) {
+.controller('ProfilesCtrl', function($scope, Clients, Dservice, lodash, $location) {
+  analytics.page($location.url());
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -48,7 +58,8 @@ angular.module('starter.controllers', [])
   $scope.clients = Clients.all();
 })
 
-.controller('ProfileDetailCtrl', function($scope, $stateParams, Clients) {
+.controller('ProfileDetailCtrl', function($scope, $stateParams, Clients, $location) {
+  analytics.page($location.url());
   $scope.client = Clients.get($stateParams.profileId);
   $(function () {
     var seriesOptions = [],
@@ -110,7 +121,8 @@ angular.module('starter.controllers', [])
   });
 })
 
-.controller('OpportunitiesCtrl', function($scope, SocketService, Opportunities) {
+.controller('OpportunitiesCtrl', function($scope, SocketService, Opportunities, $location) {
+  analytics.page($location.url());
 
   $scope.opportunities = Opportunities.all();
   SocketService.on('message', function(msg){
@@ -118,10 +130,12 @@ angular.module('starter.controllers', [])
 
   $scope.discardOpportunity = function(opportunity) {
     Opportunities.remove(opportunity);
+    analytics.track('opportunity_discarded');
   }
 
   $scope.sendOpportunity = function(opportunity) {
     SocketService.emit('push_from_banker', opportunity);
+    analytics.track('opportunity_sent');
     opportunity.sent = true;
   }
 
@@ -133,5 +147,6 @@ $(function(){$.getJSON("https://www.highcharts.com/samples/data/jsonp.php?filena
 
 })
 
-.controller('OpportunityNewCtrl', function($scope, SocketService, Opportunities) {
+.controller('OpportunityNewCtrl', function($scope, SocketService, Opportunities, $location) {
+  analytics.page($location.url());
 });

@@ -14,14 +14,12 @@ io.on('connection', function(socket) {
     console.log(msg);
   });
 
-  socket.on('accept_from_client', function(msg) {
-    io.emit('accept_from_client', msg);
+  socket.on('buy_product', function(msg) {
+    io.emit('buy_product', msg);
     console.log(msg);
   });
-  var i = 0;
 
-  setInterval(function() {
-    i++;
+  for (var i = 0; i < 5; i++) {
     io.emit('push_from_banker', 
     { id: i,
   type: 'Test'+i,
@@ -29,8 +27,7 @@ io.on('connection', function(socket) {
   projection: { duration: 4.5 },
   analysis: 'Analysis',
   '$$hashKey': 'object:30' });
-  }, 6500);
-
+  }
 });
 
 http.listen(3000, function(){
