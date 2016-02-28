@@ -18,16 +18,6 @@ io.on('connection', function(socket) {
     io.emit('buy_product', msg);
     console.log(msg);
   });
-
-  for (var i = 0; i < 5; i++) {
-    io.emit('push_from_banker', 
-    { id: i,
-  type: 'Test'+i,
-  duration: 2,
-  projection: { duration: 4.5 },
-  analysis: 'Analysis',
-  '$$hashKey': 'object:30' });
-  }
 });
 
 http.listen(3000, function(){
