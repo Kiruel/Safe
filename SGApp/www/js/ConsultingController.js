@@ -4,15 +4,39 @@ consulting.controller('consultingCtrl', function($state, $scope, Dservice, Socke
 
   console.log("Consulting controller");
   $scope.dataFromBanker = [];
-  var i = 0;
+  $scope.chart = {};
+
+  var cardNumber = 0;
   SocketService.on('push_from_banker', function(data){
     if (data)
     {
       $state.go($state.current, {}, {reload: true});
-      $scope.dataFromBanker = [{i:data}].concat($scope.dataFromBanker);
-      i++;
+      $scope.dataFromBanker = [{cardNumber:data}].concat($scope.dataFromBanker);
+      $scope.dataFromBanker.cardNumber = cardNumber;
+      cardNumber++;
     }
   });
+
+  $scope.acheter = function (id) {
+
+    SocketService.emit('buy_product', {prod: id, action: true});
+    console.log(id);
+    console.log("Achter: "+id);
+  }
+
+  $scope.vendre = function (id) {
+    SocketService.emit('buy_product', {prod: id, action: false});
+    
+    console.log("Vendre: "+id);
+    // $scope.dataFromBanker.remove(function(el) { return el.id === id; });
+
+  }
+
+  var removeCard = function(id) {
+
+  }
+
+
 
 //   Object {id: 0, type: "Test", duration: 2, projection: Object, analysis: "Test 22"…}
 // $$hashKey: "object:30"

@@ -208,8 +208,3 @@ home.controller('ClientDetailCtrl', function($scope, $stateParams, Dservice) {
     });
     // console.log($scope.clientId);
 });
-
-
-
-
-
