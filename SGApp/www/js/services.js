@@ -115,28 +115,28 @@ angular.module('DataService', [])
         title: data[36][18],
         p_l: parseFloat(data[36][17].replace(/\s/g, "")) - parseFloat(data[36][16].replace(/\s/g, "")),
         perfomance: ((parseFloat(data[36][17].replace(/\s/g, "")) - parseFloat(data[36][16].replace(/\s/g, ""))) / parseFloat(data[36][16].replace(/\s/g, "")) * 100).toFixed(2),
-        perfomance_annual: "asdfadsf",
-        volatilite: "",
-        max_drawdown: "",
-        tracking_error: ""
+        perfomance_annual: 15.2,
+        volatilite: 14.3,
+        max_drawdown: -12.81,
+        tracking_error: 9.54
       }, {
         id: 1,
         title: data[36][24],
         p_l: parseFloat(data[36][23].replace(/\s/g, "")) - parseFloat(data[36][22].replace(/\s/g, "")),
         perfomance: ((parseFloat(data[36][23].replace(/\s/g, "")) - parseFloat(data[36][22].replace(/\s/g, ""))) / parseFloat(data[36][22].replace(/\s/g, "")) * 100).toFixed(2),
-        perfomance_annual: "asdfadsf",
-        volatilite: "",
-        max_drawdown: "",
-        tracking_error: ""
+        perfomance_annual: 2.0,
+        volatilite: 15.3,
+        max_drawdown: -12.81,
+        tracking_error: 10.03
       }, {
         id: 2,
         title: data[36][30],
         p_l: parseFloat(data[36][29].replace(/\s/g, "")) - parseFloat(data[36][28].replace(/\s/g, "")),
         perfomance: ((parseFloat(data[36][29].replace(/\s/g, "")) - parseFloat(data[36][28].replace(/\s/g, ""))) / parseFloat(data[36][28].replace(/\s/g, "")) * 100).toFixed(2),
-        perfomance_annual: "asdfadsf",
-        volatilite: "",
-        max_drawdown: "",
-        tracking_error: ""
+        perfomance_annual: 35.8,
+        volatilite: 12.7,
+        max_drawdown: -6.14,
+        tracking_error: 8.86
       }];
 
       for (var i = 0; i < clients.length; i++) {

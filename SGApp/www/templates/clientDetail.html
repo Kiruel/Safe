@@ -1,22 +1,13 @@
 <ion-view view-title="{{clientId.title}}">
   <ion-content class="padding">
-    <p>
-      {{clientId.p_l}}
-    </p>
-     <p>
-      {{clientId.perfomance}}
-    </p>
-     <p>
-      {{clientId.perfomance_annual}}
-    </p>
-     <p>
-      {{clientId.volatilite}}
-    </p>
-    <p>
-      {{clientId.max_drawdown}}
-    </p>
-    <p>
-      {{clientId.tracking_error}}
-    </p>
+    <div id="cardCompte" class="card">
+      <h4 class="detailCompte">Title:</h4><span class="valuesCompte">{{clientId.title}}</span></br>
+      <h4 class="detailCompte">Profit & Loss:</h4><span class="valuesCompte">{{clientId.p_l}} €</span></br>
+      <h4 class="detailCompte">Perfomance:</h4><span class="valuesCompte">{{clientId.perfomance}} %</span></br>
+      <h4 class="detailCompte">Volatilite:</h4><span class="valuesCompte">{{clientId.volatilite}} %</span></br>
+      <h4 class="detailCompte">Max Drawdown:</h4><span class="valuesCompte">{{clientId.max_drawdown}} %</span></br>
+      <h4 class="detailCompte">Tracking Error:</h4><span class="valuesCompte">{{clientId.tracking_error}} %</span>
+    </div>
+
   </ion-content>
 </ion-view>
