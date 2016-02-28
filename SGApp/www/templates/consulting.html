@@ -1,35 +1,20 @@
 <ion-view view-title="Consulting">
   <ion-content  class="background">
-
-    <div id="containerChart" style="height: 400px; min-width: 310px"></div>
-
     <div ng-repeat="index in dataFromBanker">
       <div ng-repeat="data in index ">
         <div  class="card">
           <div class="item item-divider">
           <div class="row">
             <div class="col col-33">Type: {{data.type}}</div>
-            <div class="col col-33 col-offset-33">Time: {{data.duration}} ans</div>
+            <div class="col col-33 col-offset-33">{{data.duration}}</div>
           </div>
         </div>
-          <div class="item item-text-wrap">
-            <div class="col col-offset-50">
-              <label class="item item-input">
-                <span class="input-label">Password</span>
-                <input type="text">
-              </label>
+            <div id="cardConsulting" ng-bind-html="data.analysis"></div>
+            <div class="col col-offset-70">
             <button class="button button-balanced" ng-click="acheter(index.cardNumber)">
               Acheter
             </button>
-            <button class="button button-assertive" ng-click="vendre(index.cardNumber)">
-              Vendre
-            </button>
-            <ion-icon name="remove-circle"></ion-icon>
           </div>
-            {{data.analysis}}
-          </div>
-          <div class="item item-divider">
-            I'm a Footer in a Card!
           </div>
         </div>
       </div>

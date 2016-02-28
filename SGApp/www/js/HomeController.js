@@ -1,6 +1,9 @@
 var home = angular.module('home.controllers', []);
 
-home.controller('homeCtrl', function($scope, Dservice) {
+home.controller('homeCtrl', function($scope, Dservice, $location) {
+
+     analytics.page($location.url());
+
   $scope.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
   $scope.data = [300, 500, 100];
   // Form data for the login modal
@@ -65,7 +68,7 @@ home.controller('homeCtrl', function($scope, Dservice) {
   setTimeout(function () {
 
          // $(function () {
-            $('#container').highcharts({
+            Highcharts.chart('container', {
                 labels:
                 {
                     enabled: true
@@ -111,7 +114,7 @@ home.controller('homeCtrl', function($scope, Dservice) {
                 }]
             });
         // });
-    }, 500);
+    }, 2000);
 
     home.controller('ClientDetailCtrl', function($scope, $stateParams, Dservice) {
         $scope.clientId = {};

@@ -1,7 +1,8 @@
 var portefeuille = angular.module('portefeuille.controllers', []);
 
-portefeuille.controller('portefeuilleCtrl', function($scope, Dservice) {
+portefeuille.controller('portefeuilleCtrl', function($scope, Dservice, $location) {
 
+     analytics.page($location.url());
 console.log("Portefeuille controller");
 
 $scope.client= {};
@@ -48,8 +49,10 @@ Dservice.getClientsTableDetailed(function (data) {
 	$scope.clientId = {};
 	// console.log($stateParams.clientId);
  	$scope.clientId = Dservice.getClientId($stateParams.clientId, function (data) {
- 		console.log(data);
+
  		$scope.clientId = data;
+ 		analytics.track("on_click_detail_account");
  	});
+
  	// console.log($scope.clientId);
 });
