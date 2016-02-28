@@ -1,4 +1,4 @@
-<ion-view view-title="Home">
+<ion-view view-title="Comptes">
 
   <ion-content class="background">
     <div class="card">
@@ -11,9 +11,21 @@
         <div id="container">
         </div>
       </div>
-      <!-- <div class="item item-divider">
-  I'm a Footer in a Card!
-</div> -->
+	<!-- <div class="item item-divider">
+	I'm a Footer in a Card!
+	</div> -->
+
+    </div>
+    <div class="background card">
+	<div class="item item-divider center">
+        Détails des comptes
+     </div>
+	<ion-list>
+		<ion-item ng-repeat="compte in client" class="item item-divider item-icon-right" href="#/app/clientDetail/{{compte.id}}">
+		 <span ng-class="compte.p_l < 0 ? 'down_percent' : 'up_percent'">{{compte.perfomance}}%</span><span>{{compte.title}}</span>
+		 <i class="icon ion-chevron-right icon-accessory"></i>
+		</ion-item>
+	</ion-list>
 
     </div>
   </ion-content>
